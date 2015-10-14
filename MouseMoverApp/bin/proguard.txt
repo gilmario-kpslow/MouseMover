@@ -1,0 +1,18 @@
+# view AndroidManifest.xml #generated:19
+-keep class br.com.gilmario.ClienteActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:12
+-keep class br.com.gilmario.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:22
+-keep class br.com.gilmario.TouchActivity { <init>(...); }
+
+# onClick res/layout/main.xml #generated:45
+-keepclassmembers class * { *** conectar(...); }
+
+# onClick res/layout/main.xml #generated:38
+-keepclassmembers class * { *** salvar(...); }
+
+# onClick res/layout/main.xml #generated:52
+-keepclassmembers class * { *** touch(...); }
+
