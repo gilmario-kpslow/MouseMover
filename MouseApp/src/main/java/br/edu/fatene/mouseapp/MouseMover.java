@@ -1,6 +1,7 @@
 package br.edu.fatene.mouseapp;
 
 /**
+ * Inicializa a aplicação
  *
  * @author gilmario
  */

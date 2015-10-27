@@ -10,6 +10,11 @@ import java.util.Enumeration;
  */
 public class HostUtil {
 
+    /**
+     * extrair o numero do IP local da placa de rede
+     *
+     * @return
+     */
     public String numeroIP() {
         String ip = "";
         try {
@@ -20,7 +25,6 @@ public class HostUtil {
                 while (ias.hasMoreElements()) {
                     InetAddress ia = (InetAddress) ias.nextElement();
                     if (!ni.getName().equals("lo") && ni.isUp()) {
-                        byte[] b = ia.getAddress();
                         if (!ia.getHostAddress().contains(":")) {
                             ip = ia.getHostAddress();
                         }
@@ -31,11 +35,6 @@ public class HostUtil {
             e.printStackTrace();
         }
         return ip;
-    }
-
-    public static void main(String[] args) {
-        HostUtil util = new HostUtil();
-        System.out.println(util.numeroIP());
     }
 
 }

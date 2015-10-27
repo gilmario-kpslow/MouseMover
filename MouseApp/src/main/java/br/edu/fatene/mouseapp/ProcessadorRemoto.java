@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Classe que processa as mensagens
  *
  * @author gilmario
  */
@@ -74,7 +75,6 @@ class ProcessadorRemoto implements Runnable {
                 }
                 break;
         }
-
         if (t == null) {
             t = new Thread(this);
             t.start();

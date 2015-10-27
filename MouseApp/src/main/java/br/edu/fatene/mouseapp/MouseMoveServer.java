@@ -8,6 +8,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
+ * Servidor Essa classe controla as c onexoes e o servidor de Socket é o centro
+ * da aplicação
  *
  * @author gilmario
  */

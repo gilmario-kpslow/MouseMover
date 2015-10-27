@@ -1,23 +1,34 @@
 package br.edu.fatene.mouseapp;
 
 /**
+ * Classe responsavel por montar as mensagens
  *
  * @author gilmario
  */
 public class Informacao {
 
+    /**
+     * Esse construtor recebe uma string padrao e formada de acordo com a
+     * mesagem recebida
+     *
+     * @param menssagem
+     */
     public Informacao(String menssagem) {
-        if (menssagem.contains("|")) {
-            String[] partes = menssagem.split("\\|");
-            tipo = partes[0];
-            velocidadeX = Integer.parseInt(partes[1]);
-            velocidadeY = Integer.parseInt(partes[2]);
-            botao = partes[3];
-        } else {
-            tipo = "move";
-            velocidadeX = 5;
-            velocidadeY = 5;
-            botao = "";
+        try {
+            if (menssagem.contains("|")) {
+                String[] partes = menssagem.split("\\|");
+                tipo = partes[0];
+                velocidadeX = Integer.parseInt(partes[1]);
+                velocidadeY = Integer.parseInt(partes[2]);
+                botao = partes[3];
+            } else {
+                tipo = "move";
+                velocidadeX = 5;
+                velocidadeY = 5;
+                botao = "";
+            }
+        } catch (Exception e) {
+            throw e;
         }
     }
 

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.fatene.mouseapp;
 
 import java.awt.AWTException;
@@ -15,11 +10,10 @@ import java.awt.TrayIcon;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 
 /**
+ * Formulario principal serve com base para os parametros iniciais
  *
  * @author gilmario
  */
@@ -46,6 +40,7 @@ public class Mover extends javax.swing.JFrame {
         MenuItem defaultItem = new MenuItem("Voltar");
         defaultItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 Mover.this.setVisible(true);
                 tray.remove(trayIcon);
@@ -54,6 +49,7 @@ public class Mover extends javax.swing.JFrame {
         MenuItem defaultItem2 = new MenuItem("Log");
         defaultItem2.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 log.setVisible(!log.isVisible());
             }
@@ -61,6 +57,7 @@ public class Mover extends javax.swing.JFrame {
         MenuItem defaultItem3 = new MenuItem("Fechar");
         defaultItem3.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
