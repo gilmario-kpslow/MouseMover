@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  *
  * @author gilmario
  */
-class ProcessadorRemoto implements Runnable {
+class ProcessadorRemoto1 implements Runnable {
 
     private final Robot robo;
     private final Dimension tela;
@@ -23,12 +23,12 @@ class ProcessadorRemoto implements Runnable {
     private int velocidadeY;
     private Thread t;
 
-    public ProcessadorRemoto() throws AWTException {
+    public ProcessadorRemoto1() throws AWTException {
         robo = new Robot();
         tela = Toolkit.getDefaultToolkit().getScreenSize();
     }
 
-    private synchronized void correr() {
+    private void correr() {
         while (true) {
             if (posicaoX + velocidadeX < 0 || posicaoX + velocidadeX > tela.width) {
                 velocidadeX = 0;
@@ -42,8 +42,8 @@ class ProcessadorRemoto implements Runnable {
 
             try {
                 t.sleep(10);
-            } catch (Exception ex) {
-                Logger.getLogger(ProcessadorRemoto.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ProcessadorRemoto1.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
 
