@@ -88,6 +88,6 @@ public class DefaulMensagemProducer {
     }
 
     public String moveTo(Float x, Float y) {
-        return geraString(comando, Integer.toString(x.intValue()), Integer.toString(y.intValue()), "CENTRALIZAR");
+        return geraString(move, Integer.toString(x.intValue()), Integer.toString(y.intValue()));
     }
 }

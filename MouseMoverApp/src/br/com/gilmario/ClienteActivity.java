@@ -28,7 +28,7 @@ public class ClienteActivity extends Activity implements View.OnTouchListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cliente);
-        bar = (SeekBar) findViewById(R.id.velocidade);
+        bar = (SeekBar) findViewById(R.id.velocidade1);
 
         bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 

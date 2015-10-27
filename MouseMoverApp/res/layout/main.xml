@@ -27,7 +27,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/porta"
-        android:hint="6033"
+        android:hint="50000"
         android:inputType="numberSigned"
     />
     <LinearLayout

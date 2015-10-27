@@ -36,7 +36,12 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     }
 
     public void touch(View v) {
-        startActivity(new Intent(this, TouchActivity.class));
+        String s = servidor.getText().toString();
+        int p = Integer.parseInt(porta.getText().toString());
+        Intent i = new Intent(this, TouchActivity.class);
+        i.putExtra(ClienteActivity.HOST_SERVIDOR, s);
+        i.putExtra(ClienteActivity.PORTA_SERVIDOR, p);
+        startActivity(i);
     }
 
     private void atualizarDados() {

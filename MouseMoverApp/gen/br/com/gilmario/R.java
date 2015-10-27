@@ -30,7 +30,8 @@ public final class R {
         public static final int porta=0x7f05000e;
         public static final int servidor=0x7f05000d;
         public static final int touchLayout=0x7f050010;
-        public static final int velocidade=0x7f050000;
+        public static final int velocidade=0x7f050011;
+        public static final int velocidade1=0x7f050000;
     }
     public static final class layout {
         public static final int cliente=0x7f030000;
