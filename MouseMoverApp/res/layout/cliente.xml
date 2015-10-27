@@ -31,21 +31,21 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="CE"
             android:id="@+id/btn01"
+            android:text="NO"
         />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="C"
+            android:text="N"
             android:id="@+id/btn02"
         />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:text="NE"
             android:layout_height="match_parent"
-            android:text="CD"
             android:id="@+id/btn03"
         />
     </LinearLayout>
@@ -59,7 +59,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="E"
+            android:text="O"
             android:id="@+id/btn04"
         />
         <Button
@@ -73,7 +73,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="D"
+            android:text="E"
             android:id="@+id/btn06"
         />
     </LinearLayout>
@@ -87,7 +87,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="BE"
+            android:text="SO"
             android:id="@+id/btn07"
         />
         <Button
@@ -95,14 +95,14 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="B"
+            android:text="S"
             android:id="@+id/btn08"
         />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="BD"
+            android:text="SE"
             android:id="@+id/btn09"
         />
     </LinearLayout>
@@ -116,7 +116,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="Centro"
+            android:text="Botão Dir."
             android:id="@+id/btn10"
         />
         <Button
@@ -124,7 +124,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="ClickD"
+            android:text="Centro"
             android:id="@+id/btn11"
         />
     </LinearLayout>
