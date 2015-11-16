@@ -18,6 +18,7 @@ public class MouseMoveServer implements Runnable {
     private final ServerSocket servidor;
     private final ProcessadorRemoto remoto;
     private final Log log;
+    //private Map<String, Thread> clientes= new ;
 
     public MouseMoveServer(int porta, Log log) throws IOException, AWTException {
         this.servidor = new ServerSocket(porta);
@@ -33,7 +34,7 @@ public class MouseMoveServer implements Runnable {
     }
 
     private void receberMensagem(final BufferedReader reader, Socket s) {
-        new Thread(new Runnable() {
+        Thread t = new Thread(new Runnable() {
 
             @Override
             public void run() {
@@ -42,7 +43,13 @@ public class MouseMoveServer implements Runnable {
                         if (reader.ready()) {
                             String mensagem = reader.readLine();
                             log.adicionarLog(mensagem);
+                            if ("FIM".equals(mensagem)) {
+//                                Thread cli = clientes.remove(s.getInetAddress().toString());
+//                                cli.interrupt();
+                                return;
+                            }
                             processaMensagem(mensagem);
+
                         }
                     }
                 } catch (Exception e) {
@@ -50,7 +57,9 @@ public class MouseMoveServer implements Runnable {
                 }
             }
 
-        }).start();
+        });
+        //  clientes.put(s.getInetAddress().toString(), t);
+        t.start();
     }
 
     @Override
